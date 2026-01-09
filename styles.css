@@ -1,0 +1,101 @@
+@font-face {
+  font-family: myFont;
+  src: url(/Font/digital-7.regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #393939;
+  color: #f3f3f3;
+  font-weight: 700;
+}
+
+/* container stays centered */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ⬅️ replaces the FORM */
+.calculator {
+  background-color: #3a3a3a;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 30px 30px 50px rgba(62, 59, 59, 0.73);
+  width: 340px;
+}
+
+/* screen */
+.screen {
+  margin-bottom: 15px;
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  border-radius: 12px;
+  background-color: #333;
+  font-size: 2em;
+  font-family: myFont;
+  color: #f3f3f3;
+  border: none;
+  padding: 10px;
+  text-align: right;
+}
+
+/* numpad layout */
+.numpad > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* buttons */
+.btn {
+  width: 65px;
+  height: 65px;
+  margin: 6px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: 'Tillana', cursive;
+  color: rgb(243, 123, 44);
+  background-color: rgba(63, 65, 65, 0.54);
+  border-radius: 18px;
+  border: none;
+  box-shadow: -2px -2px 5px #35444484,
+              5px 5px 15px rgba(46, 64, 78, 0.67);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgba(243, 123, 44, 0.2);
+}
+
+/* 🔹 MOBILE FRIENDLY */
+@media (max-width: 480px) {
+  .calculator {
+    width: 95vw;
+    padding: 15px;
+  }
+
+  #display {
+    height: 55px;
+    font-size: 1.7em;
+  }
+
+  .btn {
+    width: 22%;
+    height: 55px;
+    font-size: 1.2rem;
+    margin: 5px;
+  }
+}
